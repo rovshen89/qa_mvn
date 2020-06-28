@@ -1,1 +1,6 @@
 appTesting\Junit_AppTest.class
+TNG_Tests\Jquery_Test.class
+pageObject\JQueryHpage.class
+pageObject\ControlGroupPage.class
+pageObject\DatePickerPage.class
+TNG_Tests\DatePicker_Test.class

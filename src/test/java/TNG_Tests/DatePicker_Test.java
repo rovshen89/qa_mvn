@@ -41,7 +41,8 @@ public class DatePicker_Test {
 //        Thread.sleep(2000);
         jQueryHpage.switchFrame();
         datePickerPage.clickDatePick();
-        datePickerPage.getAllDates("5");
+        //System.setProperty("date", "5");
+        datePickerPage.getAllDates(System.getProperty("date"));
         Thread.sleep(3000);
 
     }

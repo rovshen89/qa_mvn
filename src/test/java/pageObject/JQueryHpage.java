@@ -22,6 +22,12 @@ public class JQueryHpage {
     @FindBy(xpath = "//a[text() = 'Datepicker']")
     WebElement datePicker;
 
+    @FindBy(xpath = "//input[@id='email']")
+    WebElement email;
+
+    @FindBy(xpath = "//input[@name='password']")
+    WebElement password;
+
     public void clickCtrlGroup() {
         controlGroup.click();
     }

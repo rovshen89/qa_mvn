@@ -25,4 +25,9 @@ public class ParamStepDefs {
         System.out.println("Username is: " + user + " and email: " + email);
     }
 
+    @Given("^I login with id (\\w+) and passId (\\d+)$")
+    public void wordParam(String user, String password) {
+        System.out.println("Username ID: " + user + " password: " + password);
+    }
+
 }

@@ -17,3 +17,8 @@ Feature: Practice for regex parameterization
     Given I sign up with user name "testUser1" and email "user@email.com"
 
 
+  @word_and_digit_param
+  Scenario: String parameter with continious words without spaces and double quotes
+    Given I login with id user2 and passId 12345
+
+

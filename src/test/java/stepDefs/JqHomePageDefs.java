@@ -47,5 +47,11 @@ public class JqHomePageDefs {
         System.out.println("inside @Then checkboxradio");
     }
 
+    @And("I switch to demo-frame")
+    public void i_swith_to_demo_frame() {
+        //code here
+        System.out.println("switch to demo frame");
+    }
+
 
 }

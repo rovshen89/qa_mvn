@@ -18,7 +18,11 @@ Feature: Practice for regex parameterization
 
 
   @word_and_digit_param
-  Scenario: String parameter with continious words without spaces and double quotes
+  Scenario: String parameter with continuous words without spaces and double quotes
     Given I login with id user2 and passId 12345
+
+  @doublevalue
+  Scenario: Double digit parameter
+    Given I pass double value into parameter 123.4567
 
 

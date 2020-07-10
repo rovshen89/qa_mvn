@@ -30,4 +30,12 @@ public class ParamStepDefs {
         System.out.println("Username ID: " + user + " password: " + password);
     }
 
+    @Given("^I pass double value into parameter (\\d+.\\d+)$")
+    public void doubleDigit(double digit){
+        System.out.println("Double digit is: " + digit);
+    }
+
+
+
+
 }

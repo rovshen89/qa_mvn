@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = {"stepDefs"}, //location of the set definition classes
         tags = "@usercredentials and not doublequoteparam" +
                 " and not @doublequoteparam1" +
-                " or @word_and_digit_param",
+                " and not @word_and_digit_param or @doublevalue",
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 )
 public class RunCukesTest {

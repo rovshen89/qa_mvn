@@ -31,8 +31,13 @@ public class ParamStepDefs {
     }
 
     @Given("^I pass double value into parameter (\\d+.\\d+)$")
-    public void doubleDigit(double digit){
+    public void doubleDigit(double digit) {
         System.out.println("Double digit is: " + digit);
+    }
+
+    @Given("^I select (Fast|Faster|Medium|Slow|Slower) from the speed drop down$")
+    public void limitedParam(String param) {
+        System.out.println("Limited param is: " + param);
     }
 
 

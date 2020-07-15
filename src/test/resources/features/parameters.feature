@@ -25,4 +25,10 @@ Feature: Practice for regex parameterization
   Scenario: Double digit parameter
     Given I pass double value into parameter 123.4567
 
+  @limitedparams
+  Scenario: Limiting parameter values
+    Given I select Faster from the speed drop down
+
+
+
 

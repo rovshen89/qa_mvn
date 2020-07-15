@@ -40,6 +40,13 @@ public class ParamStepDefs {
         System.out.println("Limited param is: " + param);
     }
 
+    @Given("^I pass integer value (\\d+)$")
+    public void intParam(int number){
+        System.out.println("Integer is: " + number);
+    }
+
+
+
 
 
 

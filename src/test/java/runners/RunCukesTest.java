@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
         dryRun = false, //execute the feature and validate whether the feature exists
         features = "classpath:features", //location of the features file folder
         glue = {"stepDefs"}, //location of the set definition classes
-        tags = "@usercredentials and not doublequoteparam" +
+        tags = "@usercredentials or @outline and not @doublequoteparam" +
                 " and not @doublequoteparam1" +
-                " and not @word_and_digit_param or @doublevalue",
+                " and not @word_and_digit_param and not @doublevalue and not @limitedparams",
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 )
 public class RunCukesTest {

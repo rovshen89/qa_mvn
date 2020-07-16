@@ -1,6 +1,10 @@
 package stepDefs;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
+
+import java.util.List;
+import java.util.Map;
 
 public class ParamStepDefs {
 
@@ -45,9 +49,25 @@ public class ParamStepDefs {
         System.out.println("Integer is: " + number);
     }
 
+    @When("^I fill (\\w+) form$")
+    public void readMap(String formType, Map<String, String> params){
+        System.out.println("\r\nForm type: " + formType);
+        for (Map.Entry<String, String> param: params.entrySet()){
+            System.out.println("key: " + param.getKey());
+            System.out.println("Value: " + param.getValue());
+        }
+    }
 
-
-
+    @Given("^I fill all forms$")
+    public void dataTable(DataTable param){
+        List<Map<String, String>> list = param.asMaps(String.class, String.class);
+        for (Map<String, String> eachMap: list){
+            System.out.println("\r\n");
+            for (Map.Entry<String, String> entry: eachMap.entrySet()){
+                System.out.println(entry.getKey() + ":" + entry.getValue());
+            }
+        }
+    }
 
 
 }

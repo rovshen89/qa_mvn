@@ -90,3 +90,17 @@ Feature: Practice for regex parameterization
       | myName4    | myLastNm4 |                 | Apt D         | 77811    | Bostom   | MS    | some1@email.com |
 
 
+  @datatable2
+  Scenario Outline: Datatable examples
+    Given I fill all forms on <Browser>
+
+      | first name | last name | address line1   | address line2 | zip code | City     | State | email           |
+      | myName1    | myLastNm1 | 100 some street | Apt A         | 77477    | Stafford | TX    |                 |
+      | myName2    | myLastNm2 | 101 some street |               | 77588    | New York | NY    | some2@email.com |
+      | myName3    |           | 102 some street | Apt C         | 77699    | Seattle  | WA    | some3@email.com |
+      | myName4    | myLastNm4 |                 | Apt D         | 77811    | Bostom   | MS    | some1@email.com |
+    Examples:
+      | Browser |
+      | chrome  |
+      | firefox |
+      | edge    |

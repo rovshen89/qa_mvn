@@ -69,5 +69,15 @@ public class ParamStepDefs {
         }
     }
 
-
+    @Given("^I fill all forms on (\\w+)")
+    public void dataTable(String browser, DataTable param){
+        List<Map<String, String>> list = param.asMaps(String.class, String.class);
+        System.out.println("Browser: " + browser);
+        for (Map<String, String> eachMap: list){
+            System.out.println("\r\n");
+            for (Map.Entry<String, String> entry: eachMap.entrySet()){
+                System.out.println(entry.getKey() + ":" + entry.getValue());
+            }
+        }
+    }
 }

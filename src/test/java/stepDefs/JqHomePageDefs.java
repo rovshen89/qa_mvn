@@ -1,13 +1,34 @@
 package stepDefs;
 
+import TNG_Tests.DatePicker_Test;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pageObject.DatePickerPage;
+import pageObject.DriverPage;
+import pageObject.JQueryHpage;
+import pageObject.*;
 
 public class JqHomePageDefs {
+    WebDriver driver;
+    String baseURL;
+    JQueryHpage jQueryHpage;
+    DatePickerPage datePickerPage;
+
 
     @Given("I am on the jquery homepage")
     public void i_am_on_the_jquery_homepage() {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.println("indside @given");
+        baseURL = "https://jqueryui.com/";
+        driver = DriverPage.getDriver();
+        jQueryHpage = new JQueryHpage(driver);
+        datePickerPage = new DatePickerPage(driver);
+        driver.manage().window().maximize();
+        driver.get(baseURL);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/", "failed");
+        System.out.println("inside @given");
+
     }
 
     @When("I click on controlgroup")
@@ -20,12 +41,12 @@ public class JqHomePageDefs {
     @Then("I land on the controlgroup page")
     public void i_land_on_the_controlgroup_page() {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("indside @then controlgroup");
+        System.out.println("inside @then controlgroup");
     }
 
     @When("I click on datepicker")
     public void i_click_on_datepicker() {
-        // Write code here that turns the phrase above into concrete actions
+        jQueryHpage.clickDatePicker();
         System.out.println("insdie @when datepicker ");
     }
 
@@ -49,8 +70,8 @@ public class JqHomePageDefs {
 
     @And("I switch to demo-frame")
     public void i_swith_to_demo_frame() {
-        //code here
         System.out.println("switch to demo frame");
+        jQueryHpage.switchFrame();
     }
 
 

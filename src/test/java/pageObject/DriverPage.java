@@ -11,7 +11,7 @@ public class DriverPage {
     static WebDriver driver;
 
     public static WebDriver getDriver() {
-        String browserName = System.getProperty("browser");
+        String browserName = System.getProperty("browser")==null?"chrome":System.getProperty("browser");
 
         if (driver == null) {
             switch (browserName) {

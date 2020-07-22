@@ -18,9 +18,10 @@ public class DatePickerDefs {
         datePickerPage.getAllDates("22");
     }
 
-    @And("I quit the browser")
+    //moved to @After hook class
+    /*@And("I quit the browser")
     public void tearDown() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
-    }
+    }*/
 }

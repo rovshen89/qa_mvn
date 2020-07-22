@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         //tags = "@usercredentials or @outline and not @doublequoteparam" +
         //        " and not @doublequoteparam1" +
          //       " and not @word_and_digit_param and not @doublevalue and not @limitedparams",
-        tags = "@dateselection",
+        tags = "@controlgroupheader",
         plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
 )
 public class RunCukesTest {

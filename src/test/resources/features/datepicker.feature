@@ -7,5 +7,5 @@ Feature: Date picker test
     Then I click on datepicker
     Then I switch to demo-frame
     Then I validate date selection
-    And I quit the browser
+    #And I quit the browser --> moved to @After hook class
 

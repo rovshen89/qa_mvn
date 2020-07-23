@@ -15,7 +15,7 @@ public class Hooks {
         String baseURL = "https://jqueryui.com/";
         driver.manage().window().maximize();
         driver.get(baseURL);
-        System.out.println("Inside @Before hook");
+        System.out.println("Browser start successful");
 
     }
 
@@ -24,5 +24,6 @@ public class Hooks {
         Thread.sleep(5000);
         driver.quit();
         System.out.println("Inside @After hook");
+        System.out.println("Browser quit successfully");
     }
 }

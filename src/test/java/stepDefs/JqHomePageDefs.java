@@ -40,7 +40,8 @@ public class JqHomePageDefs {
 
     @Then("I land on the controlgroup page")
     public void i_land_on_the_controlgroup_page() {
-        // Write code here that turns the phrase above into concrete actions
+        Assert.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/controlgroup/", "failed");
+        System.out.println("Page URL checked");
         System.out.println("inside @then controlgroup");
     }
 

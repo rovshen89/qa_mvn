@@ -1,3 +1,4 @@
 target/
 MavenBoot.iml
 .idea
+debug.log

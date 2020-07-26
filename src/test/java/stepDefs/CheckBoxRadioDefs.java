@@ -14,8 +14,14 @@ public class CheckBoxRadioDefs {
     @Then("^I validate number of (\\w+) is (\\d+)$")
     public void validate_radios_number(String type, int radios) {
         Assertions.assertEquals(radios, checkboxRadioPage.elementSize(type));
-        System.out.println("Completed number of " + type + " validation is " + radios);
+        System.out.println("Validation Completed: number of " + type + " elements is " + radios);
     }
+
+    @Then("^I select \"(.*)\" radio button$")
+    public void selectRadio(String city){
+
+    }
+
 
 
 }

@@ -59,14 +59,13 @@ public class JqHomePageDefs {
 
     @When("I click on checkboxradio")
     public void i_click_on_checkboxradio() {
-        //code here
-        System.out.println("inside @when checkboxradio");
+        jQueryHpage.clickCheckBoxRadio();
     }
 
     @But("I land on the checkboxradio page")
     public void i_land_on_the_checkboxradio_page() {
-        //code here
-        System.out.println("inside @Then checkboxradio");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/checkboxradio/", "failed");
+        System.out.println("Page URL checked");
     }
 
     @And("I switch to demo-frame")

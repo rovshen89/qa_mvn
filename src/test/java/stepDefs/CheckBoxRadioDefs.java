@@ -18,10 +18,18 @@ public class CheckBoxRadioDefs {
     }
 
     @Then("^I select \"(.*)\" radio button$")
-    public void selectRadio(String city){
-
+    public void selectRadio(String city) throws InterruptedException {
+        Assertions.assertTrue(checkboxRadioPage.selectRadio(city));
+        System.out.println("completed selecting radio");
     }
 
+    @Then("^I select \"(.*)\" checkbox$")
+    public void selectCheckbox(String star) throws InterruptedException {
+//        Assertions.assertTrue(checkboxRadioPage.selectCheckbox(star));
+        checkboxRadioPage.selectCheckBox(star);
+
+        System.out.println("completed selecting checkbox");
+    }
 
 
 }

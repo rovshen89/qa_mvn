@@ -1,15 +1,11 @@
 package stepDefs;
 
-import TNG_Tests.DatePicker_Test;
 import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import pageObject.DatePickerPage;
 import pageObject.DriverPage;
 import pageObject.JQueryHpage;
-import pageObject.*;
 
 public class JqHomePageDefs {
     WebDriver driver;
@@ -26,7 +22,7 @@ public class JqHomePageDefs {
         datePickerPage = new DatePickerPage(driver);
         //driver.manage().window().maximize(); --> moved to @Before hook
         //driver.get(baseURL); -- moved to @Before hook
-        Assert.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/", "failed");
+        Assertions.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/", "failed");
         System.out.println("inside @given");
 
     }
@@ -40,7 +36,7 @@ public class JqHomePageDefs {
 
     @Then("I land on the controlgroup page")
     public void i_land_on_the_controlgroup_page() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/controlgroup/", "failed");
+        Assertions.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/controlgroup/", "failed");
         System.out.println("Page URL checked");
         System.out.println("inside @then controlgroup");
     }
@@ -64,7 +60,7 @@ public class JqHomePageDefs {
 
     @But("I land on the checkboxradio page")
     public void i_land_on_the_checkboxradio_page() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/checkboxradio/", "failed");
+        Assertions.assertEquals(driver.getCurrentUrl(), "https://jqueryui.com/checkboxradio/", "failed");
         System.out.println("Page URL checked");
     }
 

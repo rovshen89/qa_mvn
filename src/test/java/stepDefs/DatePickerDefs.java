@@ -1,10 +1,9 @@
 package stepDefs;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pageObject.DatePickerPage;
-import pageObject.DriverPage;
+import managers.DriverPage;
 
 public class DatePickerDefs {
     WebDriver driver;

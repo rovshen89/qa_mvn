@@ -1,12 +1,18 @@
 package stepDefs;
 
 import io.cucumber.java.en.Then;
+import managers.AutomationContext;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.WebDriver;
 import pageObject.CheckboxRadioPage;
-import pageObject.DriverPage;
+import managers.DriverPage;
 
 public class CheckBoxRadioDefs {
+
+    AutomationContext context;
+
+    public CheckBoxRadioDefs(AutomationContext context){
+        this.context = context;
+    }
 
     CheckboxRadioPage checkboxRadioPage = new CheckboxRadioPage(DriverPage.getDriver());
 
@@ -31,5 +37,19 @@ public class CheckBoxRadioDefs {
         System.out.println("completed selecting checkbox");
     }
 
+    @Then("^I only select \"(.*)\" radio button$")
+    public void selectOnlyRadio(String city) throws Throwable  {
+        checkboxRadioPage.selectRadioOnly(city);
+        context.setContextMap("buttonselected:", city);
+        System.out.println("button selected: " + city);
+        context.getScenarioMgr().getScenario().log("button selected: " + city);
+    }
+
+    @Then("^I validate radiocheckbox selection$")
+    public void validateSelection()throws Throwable {
+        Assertions.assertTrue(checkboxRadioPage.validateSelection(context.getContextMap("buttonselected:")));
+        System.out.println("validated button selection: " + context.getContextMap("buttonselected"));
+        context.getScenarioMgr().getScenario().log("validated button selection: " + context.getContextMap("buttonselected"));
+    }
 
 }

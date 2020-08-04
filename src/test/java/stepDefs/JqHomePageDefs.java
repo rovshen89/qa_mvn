@@ -4,7 +4,7 @@ import io.cucumber.java.en.*;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import pageObject.DatePickerPage;
-import pageObject.DriverPage;
+import managers.DriverPage;
 import pageObject.JQueryHpage;
 
 public class JqHomePageDefs {
